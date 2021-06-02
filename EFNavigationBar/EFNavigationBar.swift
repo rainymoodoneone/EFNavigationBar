@@ -65,7 +65,7 @@ public class EFNavigationBar: UIView {
     }()
     
     public lazy var leftButton: UIButton = {
-        let button = UIButton()
+        let button = EFButton()
         button.setTitleColor(EFNavigationBar.defaultStyle.buttonTitleColor)
         button.titleLabel?.font = EFNavigationBar.defaultStyle.buttonTitleFont
         button.imageView?.contentMode = .center
@@ -75,7 +75,7 @@ public class EFNavigationBar: UIView {
     }()
     
     public lazy var rightButton: UIButton = {
-        let button = UIButton()
+        let button = EFButton()
         button.setTitleColor(EFNavigationBar.defaultStyle.buttonTitleColor)
         button.titleLabel?.font = EFNavigationBar.defaultStyle.buttonTitleFont
         button.imageView?.contentMode = .center
@@ -252,6 +252,17 @@ public extension EFNavigationBar {
     @objc func clickRight() {
         if let onClickRight = onRightButtonClick {
             onClickRight()
+        }
+    }
+}
+
+class EFButton: UIButton {
+    
+    override var isHighlighted: Bool {
+        set{
+        }
+        get {
+            return false
         }
     }
 }
