@@ -44,7 +44,7 @@ public struct EFNavigationBarConfig {
     }
     public var titleFont: UIFont = UIFont.pingFangSCMedium(ofSize: 16)
     let titleHeight: CGFloat = CGFloat.navigationBarHeight
-    var titleWidth: CGFloat = CGFloat.screenWidth - 2 * buttonWidth
+    var titleWidth: CGFloat = CGFloat.screenWidth - 2 * CGFloat.navigationBarHeight
     
     public var buttonTitleColor: UIColor = UIApplication.shared?.keyWindow()?.tintColor ?? UIColor.black
     public var buttonTitleSize: CGFloat = UIFont.labelFontSize {
